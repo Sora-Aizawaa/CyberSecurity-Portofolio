@@ -1,4 +1,5 @@
-**🛡️ SQL Injection Practice - XVWA**
+#🛡️ SQL Injection Practice - XVWA
+
 Welcome to my hands-on SQL Injection lab using XVWA (Xtreme Vulnerable Web Application). This project is part of my cybersecurity learning journey, focusing on UNION-based SQL Injection in a safe, local testing environment.
 
 🎯 Target Information
