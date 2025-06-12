@@ -1,4 +1,4 @@
-# 🛡️ SQL Injection Practice - XVWA
+# 🛡️ SQL Injection Practice Boolean - XVWA
 
 ## 🎯 Target Information
 - **Application**: XVWA (Xtreme Vulnerable Web Application)
@@ -11,7 +11,7 @@ In XVWA, I input payloads directly into the form field to test SQL injection vul
 
 To produce a **TRUE** result and bypass filters, try inputting.
 
-hululul' OR '1'='1' #
+## hululul' OR '1'='1' #
 
 
 
