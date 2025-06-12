@@ -1,15 +1,22 @@
 
 # 🛡️ SQL Injection Practice - XVWA
-Welcome to my hands-on SQL Injection lab using XVWA (Xtreme Vulnerable Web Application). This project is part of my cybersecurity learning journey, focusing on UNION-based SQL Injection in a safe, local testing environment.
+Welcome to my hands-on SQL Injection lab using XVWA (Xtreme Vulnerable Web Application). 
+
+This project is part of my cybersecurity learning journey, focusing on UNION-based SQL Injection in a safe, local testing environment.
 
 ## 🎯 Target Information
-Application: XVWA (Xtreme Vulnerable Web Application)
+Application: XVWA (Xtreme Vulnerable Web Application)  
+
 Testing URL: http://localhost/xvwa/vulnerabilities/sqli/
+
 Environment: Local VMware (Safe Testing Lab)
+
 Purpose: Practicing UNION-based SQL Injection techniques in a safe, controlled environment.
+
 
 ## 🧪 Understanding Columns in UNION-Based SQL Injection
 Before using a UNION SELECT statement in SQL Injection, it is important to determine the number of columns in the original SQL query. This is because the number of columns in the UNION query must match the number of columns in the original query.
+
 
 ## 🔍 Using ORDER BY to Identify the Number of Columns
 To test how many columns are being used in a vulnerable SQL query, we can use the ORDER BY clause. For example:
@@ -56,6 +63,7 @@ For example:
 ### ' UNION SELECT 1, database(), 3, user(), 5, 6, 7 #
 This will inject the values from the database and user functions into the page, helping you confirm that the injection is successful and data is being retrieved.
 
+
 ## 🗂️ Enumerating Tables in the Current Database
 Once you have successfully injected and retrieved information using functions like database() and user(), the next step is to enumerate all the tables in the current database. This helps identify where sensitive data might be stored, such as in a users table.
 
@@ -77,6 +85,7 @@ The other numbers (1, 3, user(), 5, 6, 7) match the total number of columns prev
 This payload will display the list of all tables in the current database. One of the most common and interesting targets is usually a table called: users
 Once you confirm that a users table exists, you can move forward and enumerate its columns and eventually the data it stores.
 
+
 ## 🔎 Enumerating Columns from the users Table
 After identifying the presence of the users table, the next step is to enumerate its columns. This helps you understand what kind of data is stored — such as username, password, email, etc.
 
@@ -97,6 +106,7 @@ The rest of the numbers (e.g., 1, 3, user(), 5, 6, 7) are placeholders to match 
 The result might return something like:
 ### id,username,password,email
 These are the columns inside the users table that can be used in the next step to retrieve sensitive data.
+
 
 ## 🔐 Extracting Data from the users Table
 After discovering the column names in the users table (e.g., username, password), the next objective is to extract the actual data stored within those columns — such as usernames and hashed passwords.
